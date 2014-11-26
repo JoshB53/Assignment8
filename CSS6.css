@@ -1,0 +1,65 @@
+/*
+- Assignment 6: Creating an Interactive Dynamic Table
+  - Joshua Blanchette, UMass Lowell Computer Science Transfer Student
+  - Email:  Joshua_Blanchette@student.uml.edu
+  - Date: 10/22/2014
+  - This page contains my CSS that makes my page look pretty.  There is a
+  - link in my html file that allows the two files to talk to each other.
+*/
+
+
+/*Im assuming that using the html tag to customize all of my page
+  is not a good idea, but I thought it was suitable for this project.
+  This code adds a nice, subtle background color, and specifies a certain
+  width for my webpage and when to break into a new line.*/
+html{
+    background-color: #FFBF7E;
+    width: 75em;
+    word-wrap: break-word;
+    text-align: center;
+}
+/* These rules change the font type, size and decorating of the text
+   in h1.  It also adds a solid line border underneath h1 and changes the color*/
+h1{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
+    text-decoration: none;
+    border-bottom: 5px solid #154BB2;
+    color: #154BB2;
+}
+/* Theese rules change the font typem size and color of my h2. */
+h2{
+    font-family: 'Changa One', cursive; 
+    font-size: 2em;
+    color: #154BB2;    
+}
+/* These next two rules change the background color of the first
+   boxes in the column/row section.  This allows the user to easily
+   understand which numbers are not being multipled*/
+table tr:first-child {
+    background: lightblue;
+}
+table tr td:first-child{
+    background: lightblue;
+}
+/* Changes the font and color of the text in the form1 tag */
+#form1{
+    font-family: 'Open Sans', sans-serif;
+    color: #154BB2;
+}
+/* This rule makes the border of my table a thichker, black line */
+table{
+    border: 3px solid black;
+}
+
+/* These last three rules adjust the positioning of the numbers
+  inside my table.*/
+#EndH{
+    margin-left: 12px;
+}
+#StartV{
+    margin-left: 23px
+}
+#EndV{
+    margin-left:33px;
+}
