@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-- Assignment 6: Creating an Interactive Dynamic Table
+- Assignment 8: Creating an Interactive Dynamic Table With Tabs
   - Joshua Blanchette, UMass Lowell Computer Science Transfer Student
   - Email:  Joshua_Blanchette@student.uml.edu
   - Date: 10/22/2014
@@ -10,30 +10,50 @@
 -->
 <html>
   <head>
-    <title>Assignment 6!</title>
+    <title>Assignment 8!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- Import jquery library -->
     <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    
     <!-- Below allows my JS to interact with my page -->
     <script src="A6Jscript.js"></script>
+    
     <!--Below are links to customize my fonts using Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
     <!-- Below allows my CSS to interact with my page -->
     <link type="text/css" rel="stylesheet" href="CSS6.css" />
+  
   </head>
   <body>
     <h1> Dynamic Multiplication Table</h1>
     <h2> Please fill out the following </h2>
+    <div id="Form_Start"> <!-- This div id groups the form and addTab button -->
       <!-- This form tag creates four input boxes, allowing for user input -->
       <form id="form1" action="javascript:void(0)">
         Starting horizontal multiplier: <input type="number" name="StartH" id="StartH"><br>
         Ending horizontal multiplier:   <input type="number" name="EndH" id="EndH"><br>
         Starting vertical multiplier: <input type="number" name="StartV" id="StartV"><br>
         Ending vertical multiplier:   <input type="number" name="EndV" id="EndV"><br>
-        <input type="submit" value="Submit Answer">
-      </form>
+       <!-- <input type="submit" value="Submit Answer"> -->
+        <button class ="addTab"> Generate Table in New Tab </button>
+      </form> <!-- Remove button put outside of form tag -->
+      <button id = "removeAll">Remove all tabs </button>
+    </div>
+    <!--Start of div id for tabs -->
+    <div id="tabs">
+      <ul id="ultab">
+        <li><a href="#a"> Tab #1 </a></li>
+      </ul>
+      <div id="a"><!-- Nested div -->
+        <button class ="removeTab"> Remove This Tab </button>
+      </div><!--End of removeTab id -->
+    </div><!-- End of tabs id -->  
   </body>
 </html>
